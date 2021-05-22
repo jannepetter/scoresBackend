@@ -4,9 +4,14 @@ const bcryptjs = require('bcryptjs')
 
 
 scorerouter.get('/', async (req, res) => {
-    console.log(req.body)
-    const scoret = await Score.find({})
-    res.json(scoret)
+    try {
+        console.log(req.body)
+        const scoret = await Score.find({})
+        res.json(scoret)
+    } catch (error) {
+        console.log(error.message)
+    }
+
 })
 
 scorerouter.post('/', async (req, res) => {
