@@ -3,8 +3,6 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const mongoose = require('mongoose')
-
-// const Blog = require('./models/score')
 const scorerouter = require('./controllers/scorerouter')
 const mUrl = config.dburl
 mongoose.connect(mUrl, config.MONGOCONFIG)
